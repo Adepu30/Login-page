@@ -1,94 +1,284 @@
-img {
-  width: 8rem;
-  height: 5rem;
-  margin: 2rem 0 0 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.font {
-  font-size: 1.6rem;
+html {
+  --primary-color: #e1e6eb;
+  --secondary-color: #22b3a4;
+  --font-color: white;
 }
+
+.container-fluid {
+  background-color: var(--primary-color);
+  margin-block: 3rem;
+}
+
+#logo {
+  width: 10rem;
+
+}
+
+#header {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+
+#tracker {
+  font-size: 3.1rem;
+  padding-block: 2rem;
+}
+
+
+
+
+.register {
+  padding: 3px;
+  background-color: var(--primary-color);
+  border-radius: 35px;
+  display: flex;
+  width: fit-content;
+  margin-bottom: 2.5rem;
+
+}
+
+.register .signin,
+.register .signup {
+  font-size: 1.45rem;
+  color: black;
+  padding: 0.3rem 1.2rem;
+  display: inline-block;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.register .signin {
+  background-color: var(--secondary-color);
+  color: var(--font-color);
+}
+
+
 .star {
   color: red;
 }
 
-.radio {
-  margin: 1.6rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
 
-footer {
-  padding: 1rem 0 0 1rem;
-  font-size: 1.2rem;
-  text-align: center;
-  background-color: #f8fafb;
-  border-radius: 0.5rem;
-}
-
-.google > a {
-  text-decoration: none;
-  font-size: 1.6rem;
-  color: black;
-}
 .google {
-  padding: 1rem 0 1rem 0;
-  margin: 5rem 0 0 0;
-  border: solid;
-  border-width: 0.05rem;
+  padding: 0.7rem 0;
+  margin-top: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  /* font-size: 1rem; */
   text-align: center;
   border-radius: 0.5rem;
-  width: 45rem;
+  cursor: pointer;
 }
 
-button {
-  padding: 1.2rem 0 1.2rem 0;
-  margin: 5rem 0 0 0;
-  border: solid;
-  border-width: 0rem;
+.google>a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.25rem;
+}
+
+.btn {
+  padding: 0.7rem 0;
+  margin-top: 3rem;
   border-radius: 0.5rem;
-  width: 45rem;
-  background-color: #22b3a4;
-  color: white;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--font-color);
+  font-size: 1.35rem;
 }
 
 .fa-google {
-  background: conic-gradient(
-      from -45deg,
+  background: conic-gradient(from -45deg,
       #ea4335 110deg,
       #4285f4 90deg 180deg,
       #34a853 180deg 270deg,
-      #fbbc05 270deg
-    )
-    73% 55%/150% 150% no-repeat;
+      #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 2rem;
 }
 
 .card {
-  padding: 10rem 5rem 0rem 5rem;
-  background-color: white;
-  border-radius: 0.75rem;
-  margin: 2rem 0 0 0;
-  width: 55rem;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-block: 2.5rem;
+  background-color: var(--font-color);
+  border-radius: 0.5rem 0.5rem 0 0;
+
+
+  margin: 0;
+  border: 0;
+
   box-shadow: 0px 5px 5px 0px rgba(129, 155, 177, 0.2),
     0px 5px 5px 0px rgba(129, 148, 162, 0.2),
     0px 5px 5px 0px rgba(129, 144, 155, 0.2);
 }
-.fa-eye {
-  position: absolute;
-  top: 30%;
-  right: 10%;
-  cursor: pointer;
-  color: lightgray;
-}
-.time {
-  color: #22b3a4;
+
+.card input,
+.card label {
+  display: block;
+  width: 100%;
+
 }
 
-.tracker {
-  padding: 10rem 2rem;
-  font-weight: bold;
-  font-size: 4rem;
+.card label {
+  /* margin-top: 0.5rem; */
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.card input {
+  margin-bottom: 1.1rem;
+  padding: 3px;
+  font-size: 1.6rem;
+}
+
+
+
+.card input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card input:focus {
+  box-shadow: 0;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+#password-div {
+  position: relative;
+}
+
+
+
+.fa-eye {
+  position: absolute;
+  display: inline-block;
+  top: 20%;
+  right: 5%;
+  cursor: pointer;
+  color: lightgray;
+  font-size: 1.2rem;
+}
+
+.password-strength {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.password-strength span {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 1px solid var(--secondary-color);
+
+  background-color: var(--secondary-color);
+
+}
+
+.password-strength p {
+  margin-bottom: 0;
+}
+
+#ps-3 {
+  color: rgba(0, 0, 0, 0.6);
+
+}
+
+#ps-3 span {
+  background-color: unset;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.warn {
+  color: rgba(255, 166, 0, 0.8);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.time {
+  color: var(--secondary-color);
+}
+
+
+footer {
+  position: relative;
+  bottom: 2px;
+  font-size: 0.8rem;
+  text-align: center;
+  background-color: rgb(243, 234, 234);
+  border-radius: 0 0 0.5rem 0.5rem;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+footer a {
+  text-decoration: none;
+}
+
+@media screen and (max-width:1200px) {
+
+  #tracker {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width:991px) {
+
+  #header {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  #tracker {
+    font-size: 2.3rem;
+  }
+}
+
+@media screen and (max-width:767px) {
+
+  .container-fluid {
+
+    margin-block: 0;
+  }
+
+  .card {
+    padding: 5rem;
+  }
+}
+
+@media screen and (max-width:650px) {
+
+
+  .card {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+
+
+}
+
+@media screen and (max-width:576px) {
+
+  .container-fluid {
+
+    margin-block: 0;
+  }
+
+  .card {
+    min-width: 350px;
+
+  }
+
+
+
+
 }
